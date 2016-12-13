@@ -1,0 +1,23 @@
+<!-- Code PHP pour la boucle des lignes -->
+<?php
+
+    $cnx = mysql_connect( "localhost:3306", "root", " " ) or die(mysql_error());
+    $db  = mysql_select_db( "pizzeria3" );
+    $sql = mysql_real_escape_string("METTRE VOTRE REQUÊTE SQL ICI");
+    mysql_query("SET NAMES 'utf8'");
+    $reponse = mysql_query($sql, $cnx) or die( mysql_error() );
+
+    while ($donnees=mysql_fetch_array($reponse))
+    {
+
+?>
+
+    <!-- Code à insérer dans le HTML pour afficher les données -->
+    <?php echo $donnees["libelle"]; ?>
+    <!-- Fin du code à insérer dans le HTML pour afficher les données -->
+
+<?php
+
+    }
+
+?>
