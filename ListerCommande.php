@@ -10,7 +10,7 @@
         <header>
             <h1>Liste des commandes</h1>
         </header>   
-             <a href="AjouterClient.html">Ajout</a> / <a href="Accueil.html">Retour à l'accueil</a>
+             <a href="AjouterCommande.php">Ajout</a> / <a href="Accueil.html">Retour à l'accueil</a>
 <table width="100%">
     <tr>
         <th align="left">Id.</th>

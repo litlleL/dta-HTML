@@ -1,6 +1,5 @@
 <?php
- 
- 
+
   // Sélection de la base de données:
   $db  =  new PDO('mysql:host=localhost;dbname=pizzeria3;charset=utf8', 'root', '');
  
@@ -17,6 +16,7 @@
   	$sql = "INSERT  INTO clients (id, nom, prenom, ville, age)
             VALUES ( NULL, '$nom', '$prenom', '$ville', '$age') " ;
 	$array = $db->query($sql)->fetch();
+
     echo("L'insertion a été correctement effectuée") ;
   }
   else
