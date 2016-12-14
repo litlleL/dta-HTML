@@ -10,20 +10,20 @@
 
     <body>
         <header>
-            <h1>Liste des clients</h1>
+            <h1>Liste des pizzas</h1>
         </header>   
-             <a href="AjouterClient.php">Ajout</a> / <a href="index.html">Retour à l'accueil</a>
+             <a href="AjouterPizza.php">Ajout</a> / <a href="index.html">Retour à l'accueil</a>
 			 <br/>
 			 	<table width="100%">
     				<tr>
 						<th align="left">Id.</th>
-						<th align="left">Nom</th>
-						<th align="left">Prénom</th>
-						<th align="left">Ville</th>
-						<th align="left">Age</th>
+						<th align="left">Libelllé</th>
+						<th align="left">Référence</th>
+						<th align="left">Prix</th>
+						<th align="left">Photo</th>
     				</tr>
     				<?php
-						$sql = "SELECT * FROM clients";
+						$sql = "SELECT * FROM pizzas";
 						$stmt = $db->prepare($sql);
 						$stmt->execute();
 						$result = $stmt->fetchAll();
@@ -31,10 +31,10 @@
 					?>
 						<tr>
 							<td><?php echo $row["id"]; ?></td>
-							<td><?php echo $row["nom"]; ?></td>
-							<td><?php echo $row["prenom"]; ?></td>
-							<td><?php echo $row["ville"]; ?></td>
-							<td><?php echo $row["age"]; ?></td>
+							<td><?php echo $row["libelle"]; ?></td>
+							<td><?php echo $row["reference"]; ?></td>
+							<td><?php echo $row["prix"]; ?></td>
+							<td><img src="<?php echo $row["url_image"]; ?>"  style="width:200px"></td>
 							<td><a href="ModifierClient.html">Modifier</a></td>
 							<td><a href="SupprimerClient.html">Supprimer</a></td>
 						</tr>

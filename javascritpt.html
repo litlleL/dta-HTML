@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Bienvenue sur le site web de la pizzéria "La Florentina"</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!--
+                console.log("Objet: ", {nom : "DOE", prenom : "John"});
+                console.log("Tableau: ", new Array("val1", "val2"));
+                console.log("Variable: ", "val 1");
+                function test(){
+                    alert("ok");
+                }
+                console.log("Fonction :", test);
+            -->
+        </script>
+
+
+        <script type="text/javascript">
+
+            function createTable(){
+                var pos = 1;
+                document.write('<table border = "1" width="50%" align="center">');
+                for(var i = 0; i < 4 ; i++){ 
+                    document.write('<tr>');
+                        for(var j = 0; j < 3 ; j++){
+                            document.write('<td align="center">' + pos++ + '</td>'); 
+                        }   
+                    document.write('</tr>') ;
+                }
+                document.write('</table>');
+                return pos;
+            }
+            console.log(createTable());
+        
+        </script>
+
+        <script type="text/javascript">
+            function createArray(){
+                  var Tab_Age = {
+                            "anatole":19,
+                            "bernard":45,
+                            "christophe":34,
+                            "dominique":55,
+                            "franck":28,
+                            "georges":78,
+                            "lucas":12,
+                            "madeleine":30,
+                            "pierre":25
+                            };
+                var prenom = document.getElementById('prenom').value;
+                if (Tab_Age[prenom]!=undefined){
+                   alert(prenom.charAt(0).toUpperCase() + prenom.slice(1) + " : " + Tab_Age[prenom] + "ans");
+               }else{
+                   alert("erreur!");
+               }
+           }
+        </script>
+
+
+        <script type="text/javascript">
+        <!--
+            function calcMoy(tab){
+                var moy; 
+                for(note in tab){
+                    moy = moy + note;
+               }
+            }
+            var notes = [15,12,18,14,16,16,19,13,11,10,16,15];
+            calcMoy(notes);
+            -->
+        </script>
+
+
+        <script>
+        <!--
+            function modifDiv(couleur){
+                  document.getElementById('monDiv').style.backgroundColor=couleur;
+            }
+        -->
+        </script>
+
+        <header>
+                <input type="text" id="prenom" placeholder="prenom"/><button onClick="createArray()">"Quel age as-tu ? "</button>
+        </header>       
+
+       <button onClick="modifDiv('red')">"red"</button>
+       <button onClick="modifDiv('green')">"vert"</button>
+       <button onClick="modifDiv('blue')">"bleu"</button>                    
+        <div id="monDiv" style ='height:150px; width:150px; background-color: black'></div>
+         
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".small_image").hover(function () {
+                    var image = $(this).attr("rel");
+                    $('#current_image').delay(150).fadeOut(100, function() {
+                        $('#current_image').html('<img width=370 src ="'+ image +'"/>');
+                        $('#current_image').fadeIn(400);
+                    })
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="small_images"> 
+            <a class="small_image" rel="https://c2.staticflickr.com/8/7623/26467998313_0e1333c593_n.jpg">
+                <img height="80" src="https://c2.staticflickr.com/8/7623/26467998313_0e1333c593_n.jpg" />
+            </a>
+            <a class="small_image" rel="https://c2.staticflickr.com/8/7499/26458945993_595eb5ed45_n.jpg">
+                <img height="80" src="https://c2.staticflickr.com/8/7499/26458945993_595eb5ed45_n.jpg" />
+            </a>
+            <a class="small_image" rel="https://c6.staticflickr.com/8/7279/27068114485_3ca45710ef_n.jpg">
+                <img height="80" src="https://c6.staticflickr.com/8/7279/27068114485_3ca45710ef_n.jpg" />
+            </a>
+        </div>
+        <div id="current_image">
+            <img width="370" src="https://c2.staticflickr.com/8/7623/26467998313_0e1333c593_n.jpg" />
+        </div>
+    </body>
+</html>

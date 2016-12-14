@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#btnMontrer").hide();
+                $("#btnCacher").click(function() {
+                    $("p").hide();
+                    $("#btnCacher").hide();
+                    $("#btnMontrer").show();
+                });
+                $("#btnMontrer").click(function() {
+                    $("p").show();
+                    $("#btnCacher").show();
+                    $("#btnMontrer").hide();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Prise en main de jQuery</h1>
+        <p>Un paragraphe</p>
+        <p>Un autre paragraphe</p>
+        <button id="btnCacher">Cacher les paragraphes</button>
+        <button id="btnMontrer">Montrer les paragraphes</button>
+    </body>
+</html>

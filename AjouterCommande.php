@@ -13,29 +13,40 @@
 				<h1>Gestion des commandes</h1>
 				<h2>Création d'une commande</h2>
 			</header> 
+			<a href="index.html">Retour à l'accueil</a>
 		</div>       
 		<div>
 			<form method="POST" action="./script/ajouter_commande.php" align="center">
-				<input type="number" name="numéro" placeholder="numéro_commande"><br/>
-				<input type="date" name="date" placeholder="jj/mm/aaaa"><br/>
-				<input list="livreur" type="text" name="livreur" placeholder="Livreur"><br/>
+				<input type="number" name="numero_commande" placeholder="numero_commande"><br/>
+				<input type="date" name="date_commande" placeholder="jj/mm/aaaa"><br/>
+				<input list="livreur" type="text" name="livreur_id" placeholder="Livreur"><br/>
 				<datalist id="livreur">
 				<?php
-				    $sql = "SELECT nom FROM clients";
+				    $sql = "SELECT * FROM livreurs";
 				    $stmt = $db->prepare($sql);
 				    $stmt->execute();
 				    $result = $stmt->fetchAll();
 				      foreach($result as $row){
 				?>
-			    		<?php echo $row["nom"]; ?>
+						<option value="<?php echo $row["id"];?>"><?php echo $row["nom"]; echo " "; echo $row["prenom"]; ?></otpion>
 				<?php
 			    	}
 				?>
 					
 				</datalist>
-				<input list="client" type="text" name="client" placeholder="Client"><br/>
+				<input list="client" type="text" name="client_id" placeholder="Client"><br/>
 				<datalist id="client">
-					<option value="gdghd">
+					<?php
+						$sql = "SELECT * FROM clients";
+						$stmt = $db->prepare($sql);
+						$stmt->execute();
+						$result = $stmt->fetchAll();
+				      	foreach($result as $row){
+					?>
+						<option value="<?php echo $row["id"];?>"><?php echo $row["nom"]; echo " "; echo $row["prenom"]; ?></otpion>
+					<?php
+			    		}
+					?>
 				</datalist>
 				<input type="submit">
 			</form>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Calculatrice</title>
+	<script type="text/javascript">
+	<!--
+	function verification(entree) {
+  		var autorise ="0123456789[]()-+*%/.";
+  		for (var i = 0; i < entree.length; i++)
+   			if (autorise.indexOf(entree.charAt(i))<0) return false;
+  			return true;
+ 	}
+
+ 	function resultat() {
+        var x = 0;
+        if(verification(window.document.calculatrice.affiche.value))
+        x = eval(window.document.calculatrice.affiche.value);
+        window.document.calculatrice.affiche.value = x;
+	}
+
+ 	function ajouter(caracteres) {
+         
+   		window.document.calculatrice.affiche.value = caracteres;
+	}
+	//-->
+	</script>
+</head>
+<body>
+<form name="calculatrice" action="" onSubmit="resultat();return false;">
+	<table border="1" cellpadding="5" cellspacing="0">
+		<tr>
+			<td><input type="text" name="affiche"  align="right"></td>
+		</tr>
+		<tr>
+			<td>
+				<table border="0" cellpadding="0" cellspacing="2">
+					<tr>
+						<td><input type="button" width="50" class="button" onclick="ajouter('7')" value="  7   "></td>
+						<td><input type="button" width="50" class="button" onclick="ajouter('8')" value="  8   "></td>
+						<td><input type="button" width="50" class="button" onclick="ajouter('9')" value="  9   "></td>
+						<td><input type="button" width="50" class="button" onclick="ajouter('+')" value="  +   "></td>
+					</tr>
+					<tr>
+						<td><input type="button" width="50" class="button" onclick="ajouter('4')" value="  4   "></td>
+						<td><input type="button" width="50" class="button" onclick="ajouter('5')" value="  5   "></td>
+						<td><input type="button" width="50" class="button" onclick="ajouter('6')" value="  6   "></td>
+						<td><input type="button" width="50" class="button" onclick="ajouter('-')" value="  -   "></td>
+					</tr>
+					<tr>
+						<td><input type="button" width="50" class="button" onclick="ajouter('1')" value="  1   "></td>
+						<td><input type="button" width="50" class="button" onclick="ajouter('2')" value="  2   "></td>
+						<td><input type="button" width="50" class="button" onclick="ajouter('3')" value="  3   "></td>
+						<td><input type="button" width="50" class="button" onclick="ajouter('*')" value="  *   "></td>
+					</tr>
+					<tr>
+						<td><input type="button" width="50" class="button" onclick="ajouter('0')" value="  0   "></td>
+						<td><input type="button" width="50" class="button" onclick="ajouter('.')" value="  .   "></td>
+						<td><input type="reset"  width="50" class="button" onclick="ajouter('C')" value="  C  "></td>
+						<td><input type="button" width="50" class="button" onclick="ajouter('/')" value="  /   "></td>
+					</tr>
+					<tr>
+						<td colspan=3></td>
+						<td><input type="button" width="50" class="button" onclick="resultat()" value="  =   "></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+</html> 

@@ -10,7 +10,7 @@
 				<h1>Gestion des clients</h1>
 				<h2>Création d'un client</h2>
 			</header> 
-			<a href="Accueil.html">Retour à l'accueil</a>
+			<a href="index.html">Retour à l'accueil</a>
 		</div>       
 		<div>
 			<form method="POST" action="./script/ajouter_client.php" align="center">

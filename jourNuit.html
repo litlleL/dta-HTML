@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#nuit").click(function() {
+                    $("li#un ~ li").hide();
+                });
+                $("#jour").click(function() {
+                    $("li#un ~ li").show();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <ul>
+            <li id="un">Tu...</li>
+            <li id="deux">me</li>
+            <li id="trois">vois ?</li>
+        </ul>
+        <button id="jour">Jour !</button>
+        <button id="nuit">Nuit !</button>
+    </body>
+</html>
