@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+		<link rel="stylesheet" href="css/styleClients.css"/>
         <meta charset="utf-8" />
         <title>La Florentina</title>
     </head>
@@ -10,20 +11,16 @@
 				<h1>Gestion des clients</h1>
 				<h2>Création d'un client</h2>
 			</header> 
-			<a href="index.html">Retour à l'accueil</a>
+			<a id="retour" href="ListerClient.php">retour à la liste</a>
 		</div>       
-		<div>
-			<form method="POST" action="./script/ajouter_client.php" align="center">
+		<div id="div_form">
+			<form  method="POST" action="./script/ajouter_client.php" align="center">
 				<input type="text" name="nom" placeholder="Nom"><br/>
 				<input type="text" name="prenom" placeholder="prenom"><br/>
 				<input type="text" name="ville" placeholder="ville"><br/>
 				<input type="text" name="age" placeholder="age"><br/>
 				<input type="submit">
 			</form>
-		</div>
-		<footer>
-			<p>Copyright La Florentina - Tous droits réservés<br /><br />
-			<a href="#">Nous contacter</a></p>
-		</footer>        
+		</div>       
     </body>
 </html>

@@ -1,0 +1,33 @@
+body{
+    background-color: #000099; 
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+#header{
+    color: white;
+}
+
+ul{
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+li{
+    display:block;
+    width:100%;
+    height: 50;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top:5px; 
+    list-style-type: none;
+    text-align: center;
+}
+
+
+
+#add{
+-webkit-border-radius: 8px; 
+-moz-border-radius: 8px;
+border-radius: 8px;
+}
